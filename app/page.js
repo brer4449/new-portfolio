@@ -34,7 +34,7 @@ export default function Home() {
           height={400}
           width={300}
         />
-        <div className="my-5 bio-text">
+        <div className="my-5 montserrat">
           <p className="white">Hi, my name is</p>
           <p className="gold">Brendan Erickson</p>
           <p className="white">and I am a developer who values</p>
