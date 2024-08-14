@@ -1,4 +1,9 @@
+"use client"
+import useHandleClick from '../lib/navigation';
+
 export default function Contact() {
+  const handleClick = useHandleClick();
+
   return (
     <div className="background-container flex justify-center items-center">
       <div className="container max-w-xl">
@@ -10,7 +15,7 @@ export default function Contact() {
             className="space-y-4"
           >
             <div className="form-group">
-              <label for="name" className="block text-gray-700 font-bold mb-2">
+              <label htmlFor="name" className="block text-gray-700 font-bold mb-2">
                 Name
               </label>
               <input
@@ -23,7 +28,7 @@ export default function Contact() {
             </div>
             <div className="form-group">
               <label
-                for="_replyto"
+                htmlFor="_replyto"
                 className="block text-gray-700 font-bold mb-2"
               >
                 Email address
@@ -38,7 +43,7 @@ export default function Contact() {
             </div>
             <div className="form-group">
               <label
-                for="subject"
+                htmlFor="subject"
                 className="block text-gray-700 font-bold mb-2"
               >
                 Subject
@@ -52,7 +57,7 @@ export default function Contact() {
             </div>
             <div className="form-group">
               <label
-                for="message"
+                htmlFor="message"
                 className="block text-gray-700 font-bold mb-2"
               >
                 Message
@@ -65,7 +70,7 @@ export default function Contact() {
                 required
               ></textarea>
             </div>
-            <div class="flex justify-center">
+            <div className="flex justify-center">
                 <button
                 className="rounded-full bg-transparent border border-blue-500 py-2 px-4"
                 type="submit"
@@ -75,6 +80,10 @@ export default function Contact() {
                 </button>
             </div>
           </form>
+        </div>
+        <div className="flex justify-evenly mt-5">
+          <button className="rounded-full bg-transparent border border-blue-500 text-white py-2 px-4" onClick={() => handleClick('/')}>Home</button>
+          <button className="rounded-full bg-transparent border border-blue-500 text-white py-2 px-4" onClick={() => handleClick('/portfolio')}>Portfolio</button>
         </div>
       </div>
     </div>

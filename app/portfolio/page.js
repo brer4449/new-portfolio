@@ -1,6 +1,10 @@
+"use client"
+import useHandleClick from '../lib/navigation';
 import Image from "next/image";
 
 export default function Portfolio() {
+  const handleClick = useHandleClick();
+
   return (
     <div className="background-container">
       <h1 className="text-center white montserrat py-5">Projects</h1>
@@ -132,6 +136,10 @@ export default function Portfolio() {
           </div>
         </div>
       </div>
+      <div className="flex justify-evenly mt-5 pb-5">
+          <button className="rounded-full bg-transparent border border-blue-500 text-white py-2 px-4" onClick={() => handleClick('/')}>Home</button>
+          <button className="rounded-full bg-transparent border border-blue-500 text-white py-2 px-4" onClick={() => handleClick('/contact')}>Contact</button>
+        </div>
     </div>
   );
 }
