@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { loadSlim } from "@tsparticles/slim";
-import { useRouter } from "next/navigation";
+import useHandleClick from './lib/navigation';
 
 export default function Home() {
   const [init, SetInit] = useState(false);
@@ -19,11 +19,8 @@ export default function Home() {
     console.log(container);
   };
 
-  const router = useRouter();
+  const handleClick = useHandleClick();
 
-  const handleClick = (link) => {
-    router.push(link);
-  }
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="bio-container text-center">
