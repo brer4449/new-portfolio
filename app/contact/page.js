@@ -1,8 +1,8 @@
 export default function Contact() {
   return (
-    <div className="background-container flex justify-center items-center min-h-screen">
-      <div className="container">
-        <h1 className="text-center white montserrat pb-5">Projects</h1>
+    <div className="background-container flex justify-center items-center">
+      <div className="container max-w-xl">
+        <h1 className="text-center white montserrat pb-5">Contact</h1>
         <div className="contact-container rounded p-4">
           <form
             action="https://formspree.io/xyyjvbzz"
@@ -65,13 +65,15 @@ export default function Contact() {
                 required
               ></textarea>
             </div>
-            <button
-              className="rounded-full bg-transparent border border-blue-500 py-2 px-4"
-              type="submit"
-              value="Send"
-            >
-              Submit
-            </button>
+            <div class="flex justify-center">
+                <button
+                className="rounded-full bg-transparent border border-blue-500 py-2 px-4"
+                type="submit"
+                value="Send"
+                >
+                Submit
+                </button>
+            </div>
           </form>
         </div>
       </div>
