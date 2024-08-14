@@ -1,5 +1,5 @@
 "use client"
-import useHandleClick from '../lib/navigation';
+import useHandleClick from "../lib/navigation";
 import Image from "next/image";
 
 export default function Portfolio() {
@@ -108,12 +108,12 @@ export default function Portfolio() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-4xl mb-5">
           <div className="bg-gray-200 p-4 project-container rounded">
             <p className="text-center">
-              Sheet Metal and Air Conditioning Contractors' National Association
+              Sheet Metal and Air Conditioning Contractors&apos; National Association
               </p>
               <Image
                 className="rounded-full mx-auto"
                 src="/images/smacna.png"
-                alt={"Sheet Metal and Air Conditioning Contractors' National Association homepage"}
+                alt={"Sheet Metal and Air Conditioning Contractors&apos; National Association homepage"}
                 height={200}
                 width={200}
               />
@@ -137,8 +137,8 @@ export default function Portfolio() {
         </div>
       </div>
       <div className="flex justify-evenly mt-5 pb-5">
-          <button className="rounded-full bg-transparent border border-blue-500 text-white py-2 px-4" onClick={() => handleClick('/')}>Home</button>
-          <button className="rounded-full bg-transparent border border-blue-500 text-white py-2 px-4" onClick={() => handleClick('/contact')}>Contact</button>
+          <button className="rounded-full bg-transparent border border-blue-500 text-white py-2 px-4" onClick={() => handleClick("/")}>Home</button>
+          <button className="rounded-full bg-transparent border border-blue-500 text-white py-2 px-4" onClick={() => handleClick("/contact")}>Contact</button>
         </div>
     </div>
   );
